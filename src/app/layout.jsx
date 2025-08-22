@@ -2,6 +2,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import ClientProvider from "./ClientProvider";
 import { ToastContainer } from "react-toastify";
+import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "ProDex",
@@ -16,6 +17,7 @@ export default function RootLayout({ children, session }) {
           <Navbar />
           {children}
           <ToastContainer/>
+          <Footer/>
         </ClientProvider>
       </body>
     </html>

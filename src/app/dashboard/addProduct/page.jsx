@@ -54,8 +54,8 @@ export default function AddProductPage() {
             <option key={cat} value={cat}>{cat}</option>
           ))}
         </select>
-        <input type="text" name="image" placeholder="Image URL" className="input w-full px-3 py-2 rounded-lg focus:outline-none focus:ring focus:ring-blue-300" />
-        <button type="submit" className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">
+        <input type="text" name="image" placeholder="Image URL" className="input w-full px-3 py-2 rounded-lg focus:outline-none focus:ring focus:ring-blue-300" required />
+        <button type="submit" className="w-full text-white bg-[#4dbbe8] py-2 px-4 rounded-lg hover:bg-[#1db3ee]">
           Add Product
         </button>
       </form>
