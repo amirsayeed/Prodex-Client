@@ -15,7 +15,9 @@ export default function RootLayout({ children, session }) {
       <body className="bg-base-100">
         <ClientProvider session={session}>
           <Navbar />
-          {children}
+          <main className="max-w-[1500px] mx-auto">
+            {children}
+          </main>
           <ToastContainer/>
           <Footer/>
         </ClientProvider>

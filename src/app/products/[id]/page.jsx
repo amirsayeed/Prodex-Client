@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export async function generateStaticParams() {
-  const res = await fetch("http://localhost:5000/products");
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/products`);
   const products = await res.json();
 
   return products.map((product) => ({
@@ -16,7 +16,7 @@ export const revalidate = 60;
 export default async function ProductDetailsPage({ params }) {
   const { id } = params;
 
-  const res = await fetch(`http://localhost:5000/products/${id}`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/products/${id}`);
   if (!res.ok) {
     throw new Error("Failed to fetch product");
   }

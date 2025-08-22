@@ -2,7 +2,7 @@ import ProductCard from "@/components/ProductCard";
 import Link from "next/link";
 
 const fetchProducts = async () => {
-  const res = await fetch("http://localhost:5000/products", {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/products`, {
     cache: "no-store", 
   });
   if (!res.ok) { 
