@@ -31,7 +31,7 @@ export default async function ProductDetailsPage({ params }) {
         ← Back to Products
       </Link>
 
-     <div className="card bg-base-100 shadow-xl border border-gray-200 p-6 flex flex-col md:flex-row gap-6">
+     <div className="card bg-base-100 shadow-xl border border-gray-300 p-6 flex flex-col md:flex-row gap-6">
 
       {product.image && (
         <div>
@@ -45,9 +45,9 @@ export default async function ProductDetailsPage({ params }) {
         </div>
       )}
 
-      <div className="flex-1 card-body">
+      <div className="card-body">
         <h2 className="card-title text-3xl">{product.name}</h2>
-        <p className="text-gray-700">{product.description}</p>
+        <p className="text-lg font-semibold">{product.description}</p>
         <p className="text-lg font-semibold">Price: ${product.price}</p>
         <p className="text-lg font-medium">Stock: {product.stock}</p>
         <p className="text-lg font-medium">Category: {product.category}</p>
